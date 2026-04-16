@@ -5,33 +5,34 @@ const formatoPeso = (valor) => {
     return new Intl.NumberFormat('es-CL', {
         style: 'currency',
         currency: 'CLP',
+        minimumFractionDigits: 0
     }).format(valor);
 };
 
 async function obtenerDatos() {
+    const contenedor = document.getElementById('catalogo');
     try {
         console.log("Iniciando carga de datos...");
         const respuesta = await fetch('./productos.json');
         
         if (!respuesta.ok) {
-            throw new Error(`Error HTTP! estado: ${respuesta.status}`);
+            throw new Error(`No se encontró el archivo productos.json (Error ${respuesta.status})`);
         }
 
         const textoRaw = await respuesta.text();
-        // Limpiamos posibles espacios invisibles que dañan el JSON
+        // Limpiamos espacios o caracteres invisibles que bloquean el JSON
         productos = JSON.parse(textoRaw.trim());
         
-        console.log("Productos cargados:", productos);
-
-        // IMPORTANTE: Mostramos todos los productos apenas carga la página
+        console.log("Productos cargados exitosamente");
         renderizar(productos);
 
     } catch (error) {
         console.error("Error detallado:", error);
-        document.getElementById('catalogo').innerHTML = `
-            <div style="text-align:center; padding:50px; color:red; grid-column: 1 / -1;">
-                <h3>Error al cargar el catálogo</h3>
+        contenedor.innerHTML = `
+            <div style="grid-column: 1/-1; text-align:center; color:red; padding:20px;">
+                <h3>⚠️ Error en la base de datos</h3>
                 <p>${error.message}</p>
+                <p>Verifica que el nombre del archivo sea productos.json (todo en minúsculas).</p>
             </div>`;
     }
 }
@@ -41,43 +42,42 @@ function renderizar(data) {
     contenedor.innerHTML = "";
 
     if (data.length === 0) {
-        contenedor.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>No se encontraron modelos con ese nombre.</p>";
+        contenedor.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>🔍 No se encontraron equipos con ese nombre.</p>";
         return;
     }
 
     data.forEach(item => {
-        // Calculamos el ahorro (Prepago - Plan)
-        const ahorro = item.precioPrepago - item.precioPlan;
+        const ahorro = (item.precioPrepago || 0) - (item.precioPlan || 0);
         
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
             <div class="img-container">
-                <img src="./img/${item.imagen}" alt="${item.modelo}" onerror="this.src='https://via.placeholder.com/150?text=Sin+Foto'">
+                <img src="./img/${item.imagen}" alt="${item.modelo}" onerror="this.src='https://via.placeholder.com/200x200?text=Cargando+Imagen'">
             </div>
             <div class="brand">${item.marca}</div>
             <div class="model">${item.modelo}</div>
             
             <div class="price-row">
-                <span>Precio Prepago:</span>
+                <span>Prepago:</span>
                 <span class="price-val">${formatoPeso(item.precioPrepago)}</span>
             </div>
             
             <div class="price-row">
-                <span>Con Plan Entel:</span>
+                <span>Con Plan:</span>
                 <span class="price-val" style="color:#0033a0;">${formatoPeso(item.precioPlan)}</span>
             </div>
 
-            <div class="discount-tag">Ahorras ${formatoPeso(ahorro)}</div>
+            <div class="discount-tag">¡Ahorras ${formatoPeso(ahorro)}!</div>
 
-            ${item.precioFibra ? `
+            ${item.precioFibra && item.precioFibra !== "null" ? `
                 <div class="fiber-box">
-                    <strong>OFERTA PLAN + FIBRA:</strong><br>
-                    <span style="font-size:1.1rem;">${formatoPeso(item.precioFibra)}</span>
+                    <strong>PRECIO PLAN + FIBRA:</strong><br>
+                    <span style="font-size:1.2rem;">${formatoPeso(item.precioFibra)}</span>
                 </div>
             ` : ''}
 
-            <div class="sku-info">
+            <div class="plan-info" style="margin-top:10px; font-size:0.8rem; border-top:1px solid #eee; padding-top:10px;">
                 Plan: $17.990 | SKU: ${item.skuPlan}
             </div>
         `;
@@ -85,18 +85,14 @@ function renderizar(data) {
     });
 }
 
-// Lógica del buscador corregida para coincidir con el JSON
+// Buscador corregido
 document.getElementById('busqueda').addEventListener('input', (e) => {
     const busqueda = e.target.value.toLowerCase().trim();
-    
     const filtrados = productos.filter(p => 
         p.modelo.toLowerCase().includes(busqueda) || 
         p.marca.toLowerCase().includes(busqueda)
     );
-    
     renderizar(filtrados);
 });
 
-// Ejecutamos la carga al abrir la web
 obtenerDatos();
-  

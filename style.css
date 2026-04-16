@@ -1,0 +1,85 @@
+:root {
+    --entel-blue: #0033a0;
+    --entel-orange: #ff5000;
+    --bg-light: #f4f7f9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-light);
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-container input {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.grid-catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.img-container img {
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.brand { color: #666; font-size: 0.9em; text-transform: uppercase; }
+.model { font-size: 1.4em; margin: 5px 0; color: var(--entel-blue); }
+
+.price-box { background: #f9f9f9; padding: 10px; border-radius: 10px; margin-top: 10px; }
+.label { font-size: 0.8em; color: #555; }
+.price { font-weight: bold; font-size: 1.1em; }
+
+.discount-badge {
+    background: var(--entel-orange);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.fiber-special {
+    background: #28a745;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.plan-info {
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 10px;
+    font-size: 0.85em;
+    color: #333;
+}

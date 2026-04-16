@@ -15,7 +15,6 @@ async function obtenerDatos() {
         if (!respuesta.ok) throw new Error("No se pudo cargar productos.json");
 
         const textoRaw = await respuesta.text();
-        // El trim() es vital para quitar espacios fantasmas al inicio/final
         productos = JSON.parse(textoRaw.trim());
         
         renderizar(productos);
@@ -35,14 +34,12 @@ function renderizar(data) {
     }
 
     data.forEach(item => {
-        // Esta función quita puntos y convierte a número real
         const aNumero = (val) => {
             if (!val || val === "null" || val === null) return 0;
             if (typeof val === "number") return val;
             return Number(String(val).replace(/\./g, '').replace(/[^0-9]/g, ''));
         };
 
-        // Mapeo flexible: Busca el dato sin importar cómo se llame en el JSON
         const mod = item.Modelo || item.modelo || "Desconocido";
         const mar = item.Marca || item.marca || "EQUIPO";
         const img = item["Imagen (Nombre de archivo)"] || item.imagen || "";
@@ -53,14 +50,17 @@ function renderizar(data) {
         const fibra = aNumero(item["Dcto. Especial (Fibra)"] || item.precioFibra);
         
         const ahorro = prepa - plan;
-        // RESTA CORRECTA: Prepago menos Descuento Fibra
         const finalFibra = prepa - fibra;
 
         const card = document.createElement('div');
         card.className = 'card';
+        
+        // CORRECCIÓN: Todo el contenido (incluyendo el botón) debe ir dentro del innerHTML
         card.innerHTML = `
             <div class="img-container">
-                <img src="./img/${img}" alt="${mod}" onerror="this.src='https://via.placeholder.com/200x200?text=Sin+Foto'">
+                <img src="./img/${img}" alt="${mod}" 
+                     onclick="ampliarImagen('./img/${img}', '${mar} ${mod}')" 
+                     onerror="this.src='https://via.placeholder.com/200x200?text=Sin+Foto'">
             </div>
             <div class="brand">${mar}</div>
             <div class="model">${mod}</div>
@@ -85,16 +85,17 @@ function renderizar(data) {
                 </div>
             ` : ''}
 
-            <div style="margin-top:15px; font-size:0.8rem; border-top:1px solid #eee; padding-top:10px; color:#666;">
+            <div style="margin-top:15px; font-size:0.8rem; border-top:1px solid #eee; padding-top:10px; color:#666; margin-bottom:10px;">
                 SKU: ${sku}
             </div>
+
+            <a href="https://wa.me/56965699563?text=Hola,%20me%20interesa%20el%20${mod}%20que%20vi%20en%20el%20catálogo" 
+               target="_blank" 
+               style="display:block; text-align:center; background:#0033a0; color:white; padding:10px; border-radius:5px; text-decoration:none; font-weight:bold;">
+               Consultar Stock
+            </a>
         `;
         contenedor.appendChild(card);
-        <a href="https://wa.me/56965699563?text=Hola,%20me%20interesa%20el%20${mod}%20que%20vi%20en%20el%20catálogo" 
-   target="_blank" 
-   style="display:block; text-align:center; background:#0033a0; color:white; padding:8px; margin-top:10px; border-radius:5px; text-decoration:none;">
-   Consultar Stock
-</a>
     });
 }
 
@@ -108,13 +109,17 @@ document.getElementById('busqueda').addEventListener('input', (e) => {
     renderizar(filtrados);
 });
 
-obtenerDatos();
 function ampliarImagen(src, titulo) {
     const modal = document.getElementById("modalImagen");
     const imgGrande = document.getElementById("imgGrande");
     const captionText = document.getElementById("caption");
     
-    modal.style.display = "block";
-    imgGrande.src = src;
-    captionText.innerHTML = titulo;
+    if (modal && imgGrande) {
+        modal.style.display = "block";
+        imgGrande.src = src;
+        captionText.innerHTML = titulo;
+    }
 }
+
+// Iniciar carga
+obtenerDatos();

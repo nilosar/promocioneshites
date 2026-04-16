@@ -107,3 +107,49 @@ header {
     color: #aaa;
     margin-top: 10px;
 }
+/* Estilos para el Modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.9); 
+    cursor: zoom-out;
+}
+
+.modal-contenido {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efecto en las fotos del catálogo para que el usuario sepa que puede hacer clic */
+.img-container img {
+    cursor: zoom-in;
+    transition: transform 0.3s;
+}
+
+.img-container img:hover {
+    transform: scale(1.05);
+}

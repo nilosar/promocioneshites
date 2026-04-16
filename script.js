@@ -90,6 +90,11 @@ function renderizar(data) {
             </div>
         `;
         contenedor.appendChild(card);
+        <a href="https://wa.me/56965699563?text=Hola,%20me%20interesa%20el%20${mod}%20que%20vi%20en%20el%20catálogo" 
+   target="_blank" 
+   style="display:block; text-align:center; background:#0033a0; color:white; padding:8px; margin-top:10px; border-radius:5px; text-decoration:none;">
+   Consultar Stock
+</a>
     });
 }
 

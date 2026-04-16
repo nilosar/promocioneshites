@@ -1,0 +1,217 @@
+
+ {
+  "Modelo": "A07",
+  "Marca": "SAMSUNG",
+  "SKU Plan": "9410210016",
+  "Prepago": "99.990",
+  "Con Plan": "19.990",
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "A07.png"
+ },
+ {
+  "Modelo": "A17",
+  "Marca": "SAMSUNG",
+  "SKU Plan": "9620600010",
+  "Prepago": "139.990",
+  "Con Plan": "29.990",
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "A17.png"
+ },
+ {
+  "Modelo": "A17 5G",
+  "Marca": "SAMSUNG",
+  "SKU Plan": "9620600010",
+  "Prepago": 169990,
+  "Con Plan": "69.990",
+  "Dcto. Especial (Fibra)": 130000,
+  "Imagen (Nombre de archivo)": "A17.png"
+ },
+ {
+  "Modelo": "A36",
+  "Marca": "SAMSUNG",
+  "SKU Plan": "9635340017",
+  "Prepago": "269.990",
+  "Con Plan": "139.990",
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "A36.png"
+ },
+ {
+  "Modelo": "A37",
+  "Marca": "SAMSUNG",
+  "SKU Plan": 9637180017,
+  "Prepago": 399990,
+  "Con Plan": 249990,
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "A37.png"
+ },
+ {
+  "Modelo": "A57",
+  "Marca": "SAMSUNG",
+  "SKU Plan": 9637180017,
+  "Prepago": 499990,
+  "Con Plan": 349990,
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "A57.png"
+ },
+ {
+  "Modelo": "S26",
+  "Marca": "SAMSUNG",
+  "SKU Plan": "9565900015",
+  "Prepago": "1.099.900",
+  "Con Plan": "849.900",
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "S26.png"
+ },
+ {
+  "Modelo": "S26 ULTRA",
+  "Marca": "SAMSUNG",
+  "SKU Plan": "9664010014",
+  "Prepago": "1.549.990",
+  "Con Plan": "1.249.990",
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "S26Ultra.png"
+ },
+ {
+  "Modelo": "A5 65gb",
+  "Marca": "XIAOMI",
+  "SKU Plan": "9342180012",
+  "Prepago": "79.990",
+  "Con Plan": 19990,
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "Xiaomi Redmi A5.png"
+ },
+ {
+  "Modelo": "A5 128gb",
+  "Marca": "XIAOMI",
+  "SKU Plan": "9696580018",
+  "Prepago": "99.990",
+  "Con Plan": 9990,
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "Xiaomi Redmi A5.png"
+ },
+ {
+  "Modelo": "Redmi 15C 128GB",
+  "Marca": "XIAOMI",
+  "SKU Plan": "9401280011",
+  "Prepago": "119.990",
+  "Con Plan": "19.990",
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "Xiaomi Redmi 15c.png"
+ },
+ {
+  "Modelo": "Redmi 15C 256GB",
+  "Marca": "XIAOMI",
+  "SKU Plan": "9368750015",
+  "Prepago": "139.990",
+  "Con Plan": "49.990",
+  "Dcto. Especial (Fibra)": 130000,
+  "Imagen (Nombre de archivo)": "Xiaomi Redmi 15c.png"
+ },
+ {
+  "Modelo": "Redmi 15C 5G 256GB",
+  "Marca": "XIAOMI",
+  "SKU Plan": "9368750015",
+  "Prepago": "169.990",
+  "Con Plan": "79.990",
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "Xiaomi Redmi 15c.png"
+ },
+ {
+  "Modelo": "Redmi 15 5G 256GB",
+  "Marca": "XIAOMI",
+  "SKU Plan": "9368750015",
+  "Prepago": "219.990",
+  "Con Plan": "129.990",
+  "Dcto. Especial (Fibra)": 130000,
+  "Imagen (Nombre de archivo)": "Xiaomi Redmi 15.png"
+ },
+ {
+  "Modelo": "Xiaomi Note 15 5G",
+  "Marca": "XIAOMI",
+  "SKU Plan": "9401280011",
+  "Prepago": 269990,
+  "Con Plan": 169990,
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "Note15.png"
+ },
+ {
+  "Modelo": "Xiaomi Note 15 PRO 5G",
+  "Marca": "XIAOMI",
+  "SKU Plan": "9401280011",
+  "Prepago": 359990,
+  "Con Plan": 259990,
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "Xiaomi Redmi Note 15 Pro.png"
+ },
+ {
+  "Modelo": "Xiaomi Note 15 PRO+ 5G",
+  "Marca": "XIAOMI",
+  "SKU Plan": "9401280011",
+  "Prepago": 489990,
+  "Con Plan": 389990,
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "Xiaomi Redmi Note 15 Pro+.png"
+ },
+ {
+  "Modelo": "y04 128gb",
+  "Marca": "VIVO",
+  "SKU Plan": "9579580012",
+  "Prepago": "129.990",
+  "Con Plan": "39.990",
+  "Dcto. Especial (Fibra)": 129000,
+  "Imagen (Nombre de archivo)": "Vivo Y04.png"
+ },
+ {
+  "Modelo": "y21d",
+  "Marca": "VIVO",
+  "SKU Plan": "9291530012",
+  "Prepago": 219990,
+  "Con Plan": "109.990",
+  "Dcto. Especial (Fibra)": 130000,
+  "Imagen (Nombre de archivo)": "Vivo Y21D.png"
+ },
+ {
+  "Modelo": "X5C",
+  "Marca": "HONOR",
+  "SKU Plan": "9600400012",
+  "Prepago": "109.990",
+  "Con Plan": "19.990",
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "Honor X5C.png"
+ },
+ {
+  "Modelo": "G35 5G 256GB",
+  "Marca": "MOTOROLA",
+  "SKU Plan": "9368740016",
+  "Prepago": 149990,
+  "Con Plan": 69990,
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "G35 5G 256GB.png"
+ },
+ {
+  "Modelo": "Smart 20(BASURA EDITION)",
+  "Marca": "INFINIX",
+  "SKU Plan": "9404010011",
+  "Prepago": 149990,
+  "Con Plan": 49990,
+  "Dcto. Especial (Fibra)": "null",
+  "Imagen (Nombre de archivo)": "Infinix Smart 20.png"
+ },
+ {
+  "Modelo": "X7D",
+  "Marca": "HONOR",
+  "SKU Plan": "9579610016",
+  "Prepago": 199990,
+  "Con Plan": 119990,
+  "Dcto. Especial (Fibra)": "130.000",
+  "Imagen (Nombre de archivo)": "Honor X7D.png"
+ },
+ {
+  "Modelo": "V60 LITE",
+  "Marca": "VIVO",
+  "SKU Plan": "9579610016",
+  "Prepago": 359990,
+  "Con Plan": 269990,
+  "Dcto. Especial (Fibra)": "130.000",
+  "Imagen (Nombre de archivo)": "V60 LITE.png"
+ }

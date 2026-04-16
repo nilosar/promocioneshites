@@ -104,3 +104,12 @@ document.getElementById('busqueda').addEventListener('input', (e) => {
 });
 
 obtenerDatos();
+function ampliarImagen(src, titulo) {
+    const modal = document.getElementById("modalImagen");
+    const imgGrande = document.getElementById("imgGrande");
+    const captionText = document.getElementById("caption");
+    
+    modal.style.display = "block";
+    imgGrande.src = src;
+    captionText.innerHTML = titulo;
+}

@@ -35,6 +35,58 @@ function renderizar(data) {
 
     data.forEach(item => {
         const limpiarNumero = (val) => {
+            if (!val || val === "null" || val === null) return 0;
+            return Number(String(val).replace(/\./g, ''));
+        };
+
+        const prepago = limpiarNumero(item.precioPrepago);
+        const plan = limpiarNumero(item.precioPlan);
+        const fibraDcto = limpiarNumero(item.precioFibra);
+        
+        const ahorroNormal = prepago - plan;
+        
+        // LA CORRECCIÓN ESTÁ AQUÍ: Prepago menos Descuento Fibra
+        const precioFinalFibra = prepago - fibraDcto;
+
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <div class="img-container">
+                <img src="./img/${item.imagen}" alt="${item.modelo}" onerror="this.src='https://via.placeholder.com/200x200?text=Sin+Foto'">
+            </div>
+            <div class="brand">${item.marca || 'GENÉRICO'}</div>
+            <div class="model">${item.modelo || 'Modelo Desconocido'}</div>
+            
+            <div class="price-row">
+                <span>Precio Prepago:</span>
+                <span class="price-val">${formatoPeso(prepago)}</span>
+            </div>
+            
+            <div class="price-row">
+                <span>Con Plan Entel:</span>
+                <span class="price-val" style="color:#0033a0;">${formatoPeso(plan)}</span>
+            </div>
+
+            <div class="discount-tag">Ahorras ${formatoPeso(ahorroNormal)}</div>
+
+            ${fibraDcto > 0 ? `
+                <div class="fiber-box" style="background-color: #d4edda; border: 2px solid #28a745; margin-top:10px; padding:10px; border-radius:10px;">
+                    <strong style="color: #155724;">OFERTA EQUIPO + FIBRA:</strong><br>
+                    <span style="font-size:1.4rem; font-weight:bold; color:#155724;">${formatoPeso(precioFinalFibra)}</span><br>
+                    <small style="color:#155724;">(Dscto. Fibra aplicado sobre Prepago)</small>
+                </div>
+            ` : ''}
+
+            <div style="margin-top:15px; font-size:0.8rem; border-top:1px solid #eee; padding-top:10px; color:#666;">
+                Plan: $17.990 | SKU: ${item.skuPlan || 'N/A'}
+            </div>
+        `;
+        contenedor.appendChild(card);
+    });
+}
+
+    data.forEach(item => {
+        const limpiarNumero = (val) => {
             if (!val || val === "null") return 0;
             return Number(String(val).replace(/\./g, ''));
         };

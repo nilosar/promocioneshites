@@ -47,6 +47,51 @@ function renderizar(data) {
     }
 
     data.forEach(item => {
+        const ahorroNormal = (item.precioPrepago || 0) - (item.precioPlan || 0);
+        
+        // CORRECCIÓN: Calculamos el precio final con fibra
+        // Si el precioFibra en el JSON es el monto del descuento (ej: 130.000), 
+        // lo restamos del precio con plan.
+        const precioFinalFibra = (item.precioPlan || 0) - (item.precioFibra || 0);
+
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <div class="img-container">
+                <img src="./img/${item.imagen}" alt="${item.modelo}" onerror="this.src='https://via.placeholder.com/200x200?text=Cargando+Imagen'">
+            </div>
+            <div class="brand">${item.marca}</div>
+            <div class="model">${item.modelo}</div>
+            
+            <div class="price-row">
+                <span>Precio Prepago:</span>
+                <span class="price-val">${formatoPeso(item.precioPrepago)}</span>
+            </div>
+            
+            <div class="price-row">
+                <span>Con Plan Entel:</span>
+                <span class="price-val" style="color:#0033a0;">${formatoPeso(item.precioPlan)}</span>
+            </div>
+
+            <div class="discount-tag">Ahorras ${formatoPeso(ahorroNormal)}</div>
+
+            ${item.precioFibra && item.precioFibra !== "null" ? `
+                <div class="fiber-box" style="background-color: #d4edda; border: 2px solid #28a745;">
+                    <strong>OFERTA EQUIPO + FIBRA:</strong><br>
+                    <span style="font-size:1.3rem; font-weight:bold;">${formatoPeso(precioFinalFibra)}</span><br>
+                    <small>(Dscto. Fibra aplicado: ${formatoPeso(item.precioFibra)})</small>
+                </div>
+            ` : ''}
+
+            <div class="plan-info" style="margin-top:10px; font-size:0.8rem; border-top:1px solid #eee; padding-top:10px;">
+                Plan: $17.990 | SKU: ${item.skuPlan}
+            </div>
+        `;
+        contenedor.appendChild(card);
+    });
+}
+
+    data.forEach(item => {
         const ahorro = (item.precioPrepago || 0) - (item.precioPlan || 0);
         
         const card = document.createElement('div');

@@ -17,11 +17,10 @@ async function obtenerDatos() {
         const textoRaw = await respuesta.text();
         productos = JSON.parse(textoRaw.trim());
         
-        // Mostrar todos los productos al cargar
         renderizar(productos);
     } catch (error) {
         console.error("Error:", error);
-        contenedor.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:red;">Error al cargar datos: ${error.message}</p>`;
+        contenedor.innerHTML = `<p style="grid-column:1/-1; text-align:center; color:red;">Error en los datos: Revisa el formato del archivo productos.json</p>`;
     }
 }
 
@@ -35,10 +34,15 @@ function renderizar(data) {
     }
 
     data.forEach(item => {
-        // Aseguramos que los valores sean números para evitar errores de cálculo
-        const prepago = Number(item.precioPrepago) || 0;
-        const plan = Number(item.precioPlan) || 0;
-        const fibraDcto = (item.precioFibra && item.precioFibra !== "null") ? Number(item.precioFibra) : 0;
+        // Limpiamos los valores por si vienen con puntos o como texto
+        const limpiarNumero = (val) => {
+            if (!val || val === "null") return 0;
+            return Number(String(val).replace(/\./g, ''));
+        };
+
+        const prepago = limpiarNumero(item.precioPrepago);
+        const plan = limpiarNumero(item.precioPlan);
+        const fibraDcto = limpiarNumero(item.precioFibra);
         
         const ahorroNormal = prepago - plan;
         const precioFinalFibra = plan - fibraDcto;
@@ -47,18 +51,18 @@ function renderizar(data) {
         card.className = 'card';
         card.innerHTML = `
             <div class="img-container">
-                <img src="./img/${item.imagen}" alt="${item.modelo}" onerror="this.src='https://via.placeholder.com/200x200?text=Cargando...'">
+                <img src="./img/${item.imagen}" alt="${item.modelo}" onerror="this.src='https://via.placeholder.com/200x200?text=Sin+Foto'">
             </div>
-            <div class="brand">${item.marca}</div>
-            <div class="model">${item.modelo}</div>
+            <div class="brand">${item.marca || 'GENÉRICO'}</div>
+            <div class="model">${item.modelo || 'Modelo Desconocido'}</div>
             
             <div class="price-row">
-                <span>Prepago:</span>
+                <span>Precio Prepago:</span>
                 <span class="price-val">${formatoPeso(prepago)}</span>
             </div>
             
             <div class="price-row">
-                <span>Con Plan:</span>
+                <span>Con Plan Entel:</span>
                 <span class="price-val" style="color:#0033a0;">${formatoPeso(plan)}</span>
             </div>
 
@@ -68,12 +72,12 @@ function renderizar(data) {
                 <div class="fiber-box" style="background-color: #d4edda; border: 2px solid #28a745; margin-top:10px; padding:10px; border-radius:10px;">
                     <strong>OFERTA EQUIPO + FIBRA:</strong><br>
                     <span style="font-size:1.3rem; font-weight:bold; color:#155724;">${formatoPeso(precioFinalFibra)}</span><br>
-                    <small style="color:#155724;">(Dscto. Fibra: -${formatoPeso(fibraDcto)})</small>
+                    <small style="color:#155724;">(Descuento Fibra: -${formatoPeso(fibraDcto)})</small>
                 </div>
             ` : ''}
 
             <div style="margin-top:15px; font-size:0.8rem; border-top:1px solid #eee; padding-top:10px; color:#666;">
-                Plan: $17.990 | SKU: ${item.skuPlan}
+                Plan: $17.990 | SKU: ${item.skuPlan || 'N/A'}
             </div>
         `;
         contenedor.appendChild(card);

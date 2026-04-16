@@ -99,3 +99,4 @@ document.getElementById('busqueda').addEventListener('input', (e) => {
 
 // Ejecutamos la carga al abrir la web
 obtenerDatos();
+  

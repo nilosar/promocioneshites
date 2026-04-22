@@ -1,338 +1,339 @@
-
- {
-  "modelo": "A07 ",
-  "marca": "Samsung",
-  "skuPlan": 0,
-  "precioPrepago": 99990,
-  "precioPlan": 19990,
-  "imagen": "A07.png"
- },
- {
-  "modelo": "A17 4G",
-  "marca": "Samsung",
-  "skuPlan": 0,
-  "precioPrepago": 139990,
-  "precioPlan": 29990,
-  "imagen": "A17.png"
- },
- {
-  "modelo": "A17 5G 128 GB",
-  "marca": "Samsung",
-  "skuPlan": 0,
-  "precioPrepago": 149990,
-  "precioPlan": 39990,
-  "precioFibra": 130000,
-  "imagen": "A17.png"
- },
- {
-  "modelo": "A17 5G 256 GB",
-  "marca": "Samsung",
-  "skuPlan": 0,
-  "precioPrepago": 189990,
-  "precioPlan": 79990,
-  "precioFibra": 130000,
-  "imagen": "A17.png"
- },
- {
-  "modelo": "A37 5G",
-  "marca": "Samsung",
-  "skuPlan": 0,
-  "precioPrepago": 329990,
-  "precioPlan": 179990,
-  "imagen": "A37.png"
- },
- {
-  "modelo": "A57 5G 128 GB",
-  "marca": "Samsung",
-  "skuPlan": 0,
-  "precioPrepago": 429990,
-  "precioPlan": 279990,
-  "imagen": "A57.png"
- },
- {
-  "modelo": "A57 5G 256 GB",
-  "marca": "Samsung",
-  "skuPlan": 0,
-  "precioPrepago": 469990,
-  "precioPlan": 319990,
-  "imagen": "A57.png"
- },
- {
-  "modelo": "S26 ",
-  "marca": "Samsung",
-  "skuPlan": 0,
-  "precioPrepago": 829990,
-  "precioPlan": 579990,
-  "imagen": "S26.png"
- },
- {
-  "modelo": "S26 Ultra ",
-  "marca": "Samsung",
-  "skuPlan": 0,
-  "precioPrepago": 1199990,
-  "precioPlan": 899990,
-  "imagen": "S26Ultra.png"
- },
- {
-  "modelo": "Redmi A5 64 GB",
-  "marca": "Xiaomi",
-  "skuPlan": 0,
-  "precioPrepago": 69990,
-  "precioPlan": 19990,
-  "imagen": "Xiaomi Redmi A5.png"
- },
- {
-  "modelo": "Redmi A5 128 GB",
-  "marca": "Xiaomi",
-  "skuPlan": 0,
-  "precioPrepago": 79990,
-  "precioPlan": 9990,
-  "imagen": "Xiaomi Redmi A5.png"
- },
- {
-  "modelo": "Redmi 15C 4G 128 GB",
-  "marca": "Xiaomi",
-  "skuPlan": 0,
-  "precioPrepago": 119990,
-  "precioPlan": 19990,
-  "imagen": "Xiaomi Redmi 15c.png"
- },
- {
-  "modelo": "Redmi 15C 4G 256 GB",
-  "marca": "Xiaomi",
-  "skuPlan": 0,
-  "precioPrepago": 139990,
-  "precioPlan": 49990,
-  "precioFibra": 130000,
-  "imagen": "Xiaomi Redmi 15c.png"
- },
- {
-  "modelo": "Redmi 15C 5G 256 GB",
-  "marca": "Xiaomi",
-  "skuPlan": 0,
-  "precioPrepago": 159990,
-  "precioPlan": 59990,
-  "precioFibra": 130000,
-  "imagen": "Xiaomi Redmi 15c.png"
- },
- {
-  "modelo": "Redmi 15 5G",
-  "marca": "Xiaomi",
-  "skuPlan": 0,
-  "precioPrepago": 209990,
-  "precioPlan": 119990,
-  "imagen": "Xiaomi Redmi 15.png"
- },
- {
-  "modelo": "Note 15 5G",
-  "marca": "Xiaomi",
-  "skuPlan": 0,
-  "precioPrepago": 269990,
-  "precioPlan": 169990,
-  "imagen": "Note15.png"
- },
- {
-  "modelo": "Note 15 Pro 5G",
-  "marca": "Xiaomi",
-  "skuPlan": 0,
-  "precioPrepago": 359990,
-  "precioPlan": 259990,
-  "imagen": "Xiaomi Redmi Note 15 Pro.png"
- },
- {
-  "modelo": "Note 15 Pro+ 5G",
-  "marca": "Xiaomi",
-  "skuPlan": 0,
-  "precioPrepago": 489990,
-  "precioPlan": 389990,
-  "imagen": "Xiaomi Redmi Note 15 Pro+.png"
- },
- {
-  "modelo": "Vivo Y04",
-  "marca": "Vivo",
-  "skuPlan": 0,
-  "precioPrepago": 129990,
-  "precioPlan": 39990,
-  "precioFibra": 129000,
-  "imagen": "Vivo Y04.png"
- },
- {
-  "modelo": "Y19s ",
-  "marca": "Vivo",
-  "skuPlan": 0,
-  "precioPrepago": 169990,
-  "precioPlan": 79990,
-  "imagen": "Y19s.png"
- },
- {
-  "modelo": "Y21D",
-  "marca": "Vivo",
-  "skuPlan": 0,
-  "precioPrepago": 219990,
-  "precioPlan": 119990,
-  "precioFibra": 130000,
-  "imagen": "Vivo Y21D.png"
- },
- {
-  "modelo": "Y39 ",
-  "marca": "Vivo",
-  "skuPlan": 0,
-  "precioPrepago": 249990,
-  "precioPlan": 149990,
-  "imagen": "Y39.png"
- },
- {
-  "modelo": "V60 Lite",
-  "marca": "Vivo",
-  "skuPlan": 0,
-  "precioPrepago": 359990,
-  "precioPlan": 269990,
-  "precioFibra": 130000,
-  "imagen": "V60 LITE.png"
- },
- {
-  "modelo": "X5C",
-  "marca": "Honor",
-  "skuPlan": 0,
-  "precioPrepago": 109990,
-  "precioPlan": 19990,
-  "imagen": "Honor X5C.png"
- },
- {
-  "modelo": "X5C Plus",
-  "marca": "Honor",
-  "skuPlan": 0,
-  "precioPrepago": 139990,
-  "precioPlan": 49990,
-  "imagen": "Honor X5C.png"
- },
- {
-  "modelo": "X7D",
-  "marca": "Honor",
-  "skuPlan": 0,
-  "precioPrepago": 179990,
-  "precioPlan": 89990,
-  "precioFibra": 130000,
-  "imagen": "Honor X7D.png"
- },
- {
-  "modelo": "400 Smart",
-  "marca": "Honor",
-  "skuPlan": 0,
-  "precioPrepago": 189990,
-  "precioPlan": 99990,
-  "imagen": "400 Smart.png"
- },
- {
-  "modelo": "400 Lite",
-  "marca": "Honor",
-  "skuPlan": 0,
-  "precioPrepago": 249990,
-  "precioPlan": 149990,
-  "imagen": "400 Lite.png"
- },
- {
-  "modelo": "H400",
-  "marca": "Honor",
-  "skuPlan": 0,
-  "precioPrepago": 429990,
-  "precioPlan": 329990,
-  "imagen": "Honor 400.png"
- },
- {
-  "modelo": "Magic 8 Lite",
-  "marca": "Honor",
-  "skuPlan": 0,
-  "precioPrepago": 379990,
-  "precioPlan": 259990,
-  "imagen": "Magic 8 Lite.png"
- },
- {
-  "modelo": "G05 64 GB",
-  "marca": "Motorola",
-  "skuPlan": 0,
-  "precioPrepago": 79990,
-  "precioPlan": 1000,
-  "imagen": "G05.png"
- },
- {
-  "modelo": "G06 128 GB",
-  "marca": "Motorola",
-  "skuPlan": 0,
-  "precioPrepago": 89990,
-  "precioPlan": 9990,
-  "imagen": "G06.png"
- },
- {
-  "modelo": "G06 256 GB",
-  "marca": "Motorola",
-  "skuPlan": 0,
-  "precioPrepago": 109990,
-  "precioPlan": 29990,
-  "imagen": "G06.png"
- },
- {
-  "modelo": "G35 5G 256 GB",
-  "marca": "Motorola",
-  "skuPlan": 0,
-  "precioPrepago": 139990,
-  "precioPlan": 59990,
-  "imagen": "G35 5G 256GB.png"
- },
- {
-  "modelo": "G56 5G",
-  "marca": "Motorola",
-  "skuPlan": 0,
-  "precioPrepago": 209990,
-  "precioPlan": 159990,
-  "precioFibra": 130000,
-  "imagen": "G56.png"
- },
- {
-  "modelo": "G86 5G",
-  "marca": "Motorola",
-  "skuPlan": 0,
-  "precioPrepago": 269990,
-  "precioPlan": 189990,
-  "imagen": "G86.png"
- },
- {
-  "modelo": "Smart 20",
-  "marca": "Infinix",
-  "skuPlan": 0,
-  "precioPrepago": 149990,
-  "precioPlan": 49990,
-  "imagen": "Infinix Smart 20.png"
- },
- {
-  "modelo": "Hot 60i 5G",
-  "marca": "Infinix",
-  "skuPlan": 0,
-  "precioPrepago": 149990,
-  "precioPlan": 59990,
-  "imagen": "Hot 60i 5G.png"
- },
- {
-  "modelo": "Hot 60 5G",
-  "marca": "Infinix",
-  "skuPlan": 0,
-  "precioPrepago": 179990,
-  "precioPlan": 79990,
-  "imagen": "Hot 60 5G.png"
- },
- {
-  "modelo": "Note 50s",
-  "marca": "Infinix",
-  "skuPlan": 0,
-  "precioPrepago": 299990,
-  "precioPlan": 199990,
-  "imagen": "Note 50s.png"
- },
- {
-  "modelo": "GT30 Pro",
-  "marca": "Infinix",
-  "skuPlan": 0,
-  "precioPrepago": 429990,
-  "precioPlan": 329990,
-  "imagen": "GT 30 PRO.png"
- }
+[
+  {
+    "modelo": "A07",
+    "marca": "Samsung",
+    "skuPlan": 0,
+    "precioPrepago": 99990,
+    "precioPlan": 19990,
+    "imagen": "A07.png"
+  },
+  {
+    "modelo": "A17 4G",
+    "marca": "Samsung",
+    "skuPlan": 0,
+    "precioPrepago": 139990,
+    "precioPlan": 29990,
+    "imagen": "A17.png"
+  },
+  {
+    "modelo": "A17 5G 128 GB",
+    "marca": "Samsung",
+    "skuPlan": 0,
+    "precioPrepago": 149990,
+    "precioPlan": 39990,
+    "precioFibra": 130000,
+    "imagen": "A17.png"
+  },
+  {
+    "modelo": "A17 5G 256 GB",
+    "marca": "Samsung",
+    "skuPlan": 0,
+    "precioPrepago": 189990,
+    "precioPlan": 79990,
+    "precioFibra": 130000,
+    "imagen": "A17.png"
+  },
+  {
+    "modelo": "A37 5G",
+    "marca": "Samsung",
+    "skuPlan": 0,
+    "precioPrepago": 329990,
+    "precioPlan": 179990,
+    "imagen": "A37.png"
+  },
+  {
+    "modelo": "A57 5G 128 GB",
+    "marca": "Samsung",
+    "skuPlan": 0,
+    "precioPrepago": 429990,
+    "precioPlan": 279990,
+    "imagen": "A57.png"
+  },
+  {
+    "modelo": "A57 5G 256 GB",
+    "marca": "Samsung",
+    "skuPlan": 0,
+    "precioPrepago": 469990,
+    "precioPlan": 319990,
+    "imagen": "A57.png"
+  },
+  {
+    "modelo": "S26",
+    "marca": "Samsung",
+    "skuPlan": 0,
+    "precioPrepago": 829990,
+    "precioPlan": 579990,
+    "imagen": "S26.png"
+  },
+  {
+    "modelo": "S26 Ultra",
+    "marca": "Samsung",
+    "skuPlan": 0,
+    "precioPrepago": 1199990,
+    "precioPlan": 899990,
+    "imagen": "S26Ultra.png"
+  },
+  {
+    "modelo": "Redmi A5 64 GB",
+    "marca": "Xiaomi",
+    "skuPlan": 0,
+    "precioPrepago": 69990,
+    "precioPlan": 19990,
+    "imagen": "Xiaomi Redmi A5.png"
+  },
+  {
+    "modelo": "Redmi A5 128 GB",
+    "marca": "Xiaomi",
+    "skuPlan": 0,
+    "precioPrepago": 79990,
+    "precioPlan": 9990,
+    "imagen": "Xiaomi Redmi A5.png"
+  },
+  {
+    "modelo": "Redmi 15C 4G 128 GB",
+    "marca": "Xiaomi",
+    "skuPlan": 0,
+    "precioPrepago": 119990,
+    "precioPlan": 19990,
+    "imagen": "Xiaomi Redmi 15c.png"
+  },
+  {
+    "modelo": "Redmi 15C 4G 256 GB",
+    "marca": "Xiaomi",
+    "skuPlan": 0,
+    "precioPrepago": 139990,
+    "precioPlan": 49990,
+    "precioFibra": 130000,
+    "imagen": "Xiaomi Redmi 15c.png"
+  },
+  {
+    "modelo": "Redmi 15C 5G 256 GB",
+    "marca": "Xiaomi",
+    "skuPlan": 0,
+    "precioPrepago": 159990,
+    "precioPlan": 59990,
+    "precioFibra": 130000,
+    "imagen": "Xiaomi Redmi 15c.png"
+  },
+  {
+    "modelo": "Redmi 15 5G",
+    "marca": "Xiaomi",
+    "skuPlan": 0,
+    "precioPrepago": 209990,
+    "precioPlan": 119990,
+    "imagen": "Xiaomi Redmi 15.png"
+  },
+  {
+    "modelo": "Note 15 5G",
+    "marca": "Xiaomi",
+    "skuPlan": 0,
+    "precioPrepago": 269990,
+    "precioPlan": 169990,
+    "imagen": "Note15.png"
+  },
+  {
+    "modelo": "Note 15 Pro 5G",
+    "marca": "Xiaomi",
+    "skuPlan": 0,
+    "precioPrepago": 359990,
+    "precioPlan": 259990,
+    "imagen": "Xiaomi Redmi Note 15 Pro.png"
+  },
+  {
+    "modelo": "Note 15 Pro+ 5G",
+    "marca": "Xiaomi",
+    "skuPlan": 0,
+    "precioPrepago": 489990,
+    "precioPlan": 389990,
+    "imagen": "Xiaomi Redmi Note 15 Pro+.png"
+  },
+  {
+    "modelo": "Vivo Y04",
+    "marca": "Vivo",
+    "skuPlan": 0,
+    "precioPrepago": 129990,
+    "precioPlan": 39990,
+    "precioFibra": 129000,
+    "imagen": "Vivo Y04.png"
+  },
+  {
+    "modelo": "Y19s",
+    "marca": "Vivo",
+    "skuPlan": 0,
+    "precioPrepago": 169990,
+    "precioPlan": 79990,
+    "imagen": "Y19s.png"
+  },
+  {
+    "modelo": "Y21D",
+    "marca": "Vivo",
+    "skuPlan": 0,
+    "precioPrepago": 219990,
+    "precioPlan": 119990,
+    "precioFibra": 130000,
+    "imagen": "Vivo Y21D.png"
+  },
+  {
+    "modelo": "Y39",
+    "marca": "Vivo",
+    "skuPlan": 0,
+    "precioPrepago": 249990,
+    "precioPlan": 149990,
+    "imagen": "Y39.png"
+  },
+  {
+    "modelo": "V60 Lite",
+    "marca": "Vivo",
+    "skuPlan": 0,
+    "precioPrepago": 359990,
+    "precioPlan": 269990,
+    "precioFibra": 130000,
+    "imagen": "V60 LITE.png"
+  },
+  {
+    "modelo": "X5C",
+    "marca": "Honor",
+    "skuPlan": 0,
+    "precioPrepago": 109990,
+    "precioPlan": 19990,
+    "imagen": "Honor X5C.png"
+  },
+  {
+    "modelo": "X5C Plus",
+    "marca": "Honor",
+    "skuPlan": 0,
+    "precioPrepago": 139990,
+    "precioPlan": 49990,
+    "imagen": "Honor X5C.png"
+  },
+  {
+    "modelo": "X7D",
+    "marca": "Honor",
+    "skuPlan": 0,
+    "precioPrepago": 179990,
+    "precioPlan": 89990,
+    "precioFibra": 130000,
+    "imagen": "Honor X7D.png"
+  },
+  {
+    "modelo": "400 Smart",
+    "marca": "Honor",
+    "skuPlan": 0,
+    "precioPrepago": 189990,
+    "precioPlan": 99990,
+    "imagen": "400 Smart.png"
+  },
+  {
+    "modelo": "400 Lite",
+    "marca": "Honor",
+    "skuPlan": 0,
+    "precioPrepago": 249990,
+    "precioPlan": 149990,
+    "imagen": "400 Lite.png"
+  },
+  {
+    "modelo": "H400",
+    "marca": "Honor",
+    "skuPlan": 0,
+    "precioPrepago": 429990,
+    "precioPlan": 329990,
+    "imagen": "Honor 400.png"
+  },
+  {
+    "modelo": "Magic 8 Lite",
+    "marca": "Honor",
+    "skuPlan": 0,
+    "precioPrepago": 379990,
+    "precioPlan": 259990,
+    "imagen": "Magic 8 Lite.png"
+  },
+  {
+    "modelo": "G05 64 GB",
+    "marca": "Motorola",
+    "skuPlan": 0,
+    "precioPrepago": 79990,
+    "precioPlan": 1000,
+    "imagen": "G05.png"
+  },
+  {
+    "modelo": "G06 128 GB",
+    "marca": "Motorola",
+    "skuPlan": 0,
+    "precioPrepago": 89990,
+    "precioPlan": 9990,
+    "imagen": "G06.png"
+  },
+  {
+    "modelo": "G06 256 GB",
+    "marca": "Motorola",
+    "skuPlan": 0,
+    "precioPrepago": 109990,
+    "precioPlan": 29990,
+    "imagen": "G06.png"
+  },
+  {
+    "modelo": "G35 5G 256 GB",
+    "marca": "Motorola",
+    "skuPlan": 0,
+    "precioPrepago": 139990,
+    "precioPlan": 59990,
+    "imagen": "G35 5G 256GB.png"
+  },
+  {
+    "modelo": "G56 5G",
+    "marca": "Motorola",
+    "skuPlan": 0,
+    "precioPrepago": 209990,
+    "precioPlan": 159990,
+    "precioFibra": 130000,
+    "imagen": "G56.png"
+  },
+  {
+    "modelo": "G86 5G",
+    "marca": "Motorola",
+    "skuPlan": 0,
+    "precioPrepago": 269990,
+    "precioPlan": 189990,
+    "imagen": "G86.png"
+  },
+  {
+    "modelo": "Smart 20",
+    "marca": "Infinix",
+    "skuPlan": 0,
+    "precioPrepago": 149990,
+    "precioPlan": 49990,
+    "imagen": "Infinix Smart 20.png"
+  },
+  {
+    "modelo": "Hot 60i 5G",
+    "marca": "Infinix",
+    "skuPlan": 0,
+    "precioPrepago": 149990,
+    "precioPlan": 59990,
+    "imagen": "Hot 60i 5G.png"
+  },
+  {
+    "modelo": "Hot 60 5G",
+    "marca": "Infinix",
+    "skuPlan": 0,
+    "precioPrepago": 179990,
+    "precioPlan": 79990,
+    "imagen": "Hot 60 5G.png"
+  },
+  {
+    "modelo": "Note 50s",
+    "marca": "Infinix",
+    "skuPlan": 0,
+    "precioPrepago": 299990,
+    "precioPlan": 199990,
+    "imagen": "Note 50s.png"
+  },
+  {
+    "modelo": "GT30 Pro",
+    "marca": "Infinix",
+    "skuPlan": 0,
+    "precioPrepago": 429990,
+    "precioPlan": 329990,
+    "imagen": "GT 30 PRO.png"
+  }
+]

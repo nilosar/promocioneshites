@@ -1,258 +1,126 @@
 :root {
     --entel-blue: #0033a0;
+    --entel-dark-blue: #001f60;
     --entel-orange: #ff5000;
-    --success: #28a745;
-    --text-dark: #333;
-    --light-bg: #f8faff;
-    --white: #ffffff;
+    --bg-light: #f8faff;
+    --text-dark: #222;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--light-bg);
+    font-family: 'Segoe UI', system-ui, sans-serif;
     margin: 0;
+    background-color: var(--bg-light);
     color: var(--text-dark);
 }
 
-/* Header Modernizado con Degradado */
+/* Header */
 header {
-    background: linear-gradient(135deg, var(--entel-blue) 0%, #001f60 100%);
+    background: var(--entel-blue);
+    padding: 15px 5%;
     color: white;
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 5px solid var(--entel-orange);
-    border-radius: 0 0 30px 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.header-content {
+.header-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-/* Contenedor blanco para que el logo azul se vea perfecto */
-.logo-wrapper {
-    background: white;
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
-.logo-entel {
-    width: 120px;
-    height: auto;
-    display: block;
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
 }
 
-.header-content h1 { 
-    margin: 0; 
-    font-size: 2rem; 
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.btn-mi-entel {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
 }
 
-/* Etiqueta de precio tipo Badge */
-.badge-plan {
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--entel-blue) 0%, var(--entel-dark-blue) 100%);
+    padding: 80px 10%;
+    color: white;
+    border-radius: 0 0 50px 50px;
+    text-align: center;
+}
+
+.badge {
+    background: var(--entel-orange);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.hero h1 { font-size: 3rem; margin: 20px 0; }
+
+.btn-primary {
     background: var(--entel-orange);
     color: white;
-    display: inline-block;
-    padding: 6px 18px;
-    border-radius: 50px;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
     font-weight: bold;
-    font-size: 1rem;
-    margin: 10px 0 20px 0;
-    box-shadow: 0 4px 8px rgba(255, 80, 0, 0.3);
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 80, 0, 0.4);
 }
 
-/* Buscador más Pro */
-#busqueda {
-    width: 90%;
-    max-width: 550px;
-    padding: 16px 25px;
-    border-radius: 50px;
-    border: 2px solid transparent;
-    font-size: 1rem;
-    outline: none;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-#busqueda:focus {
-    border-color: var(--entel-orange);
-    transform: scale(1.02);
-}
-
-/* Grid del Catálogo */
-.grid-catalogo {
+/* Grid y Cards */
+.grid-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px 10%;
 }
 
-/* Tarjetas Premium */
 .card {
-    background: var(--white);
-    border-radius: 25px;
-    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
     text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid #eee;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
 }
 
-.card:hover { 
+.card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,51,160,0.1);
-    border-color: var(--entel-blue);
 }
 
-.img-container {
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.img-container img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    cursor: zoom-in;
-    transition: transform 0.3s;
-}
-
-.img-container img:hover {
-    transform: scale(1.08);
-}
-
-.brand { font-weight: bold; color: #888; text-transform: uppercase; font-size: 0.75rem; }
-.model { font-size: 1.3rem; margin: 8px 0; font-weight: 700; color: #222; }
-
-.price-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px dotted #ddd;
-    font-size: 0.9rem;
-}
-
-.price-val { font-weight: bold; color: var(--entel-blue); }
-
-.discount-tag {
-    background: linear-gradient(90deg, #ff8c00, #ff5000);
-    color: white;
-    font-weight: bold;
-    padding: 8px;
-    border-radius: 12px;
-    margin: 12px 0;
-    font-size: 0.9rem;
-}
-
-.fiber-box {
-    background: #e8f5e9;
-    border: 2px solid var(--success);
-    color: #155724;
-    padding: 10px;
-    border-radius: 12px;
-    font-size: 0.85rem;
-    margin: 10px 0;
-}
-
-/* Estilos para el Modal de Imagen */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 2000; 
-    padding-top: 60px; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.95); 
-    cursor: zoom-out;
-}
-
-.modal-contenido {
-    margin: auto;
-    display: block;
-    width: 85%;
-    max-width: 500px;
-    border-radius: 15px;
-    animation: zoom 0.3s;
-}
-
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #fff;
-    padding: 20px 0;
-    font-size: 1.2rem;
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-
-.cerrar-modal {
+.discount-label {
     position: absolute;
     top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
+    left: 15px;
+    background: var(--entel-orange);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+.card img { width: 100%; max-width: 150px; margin: 20px 0; }
+
+.precio-normal { color: #888; text-decoration: line-through; font-size: 0.9rem; }
+.precio-oferta { color: var(--entel-blue); font-size: 1.5rem; font-weight: bold; margin: 10px 0; }
+
+.btn-outline {
+    border: 2px solid var(--entel-blue);
+    background: transparent;
+    color: var(--entel-blue);
+    padding: 10px 25px;
+    border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-}
-
-/* Botón flotante de WhatsApp */
-.btn-whatsapp {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25d366;
-    color: white;
-    padding: 14px 22px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    z-index: 999;
-    transition: all 0.3s;
-}
-
-.btn-whatsapp:hover {
-    transform: scale(1.1);
-    background-color: #128c7e;
-    color: white;
-}
-
-/* Responsivo */
-@media (max-width: 480px) {
-    .btn-whatsapp {
-        padding: 12px 18px;
-        font-size: 0.85rem;
-        bottom: 15px;
-        right: 15px;
-    }
-    .grid-catalogo {
-        padding: 15px;
-        gap: 15px;
-    }
-    .header-content h1 { font-size: 1.6rem; }
 }

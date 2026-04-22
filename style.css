@@ -154,3 +154,32 @@ header h1 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 999;
 }
+/* Estilo para el contenedor del banner */
+.banner-promocional {
+    width: 100%;
+    max-width: 800px; /* Evita que se vea gigante en PC */
+    margin: 10px auto 25px auto;
+    border-radius: 20px;
+    overflow: hidden; /* Corta las esquinas de la imagen para que coincidan con el borde redondeado */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.img-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Efecto opcional: un pequeño zoom al pasar el mouse */
+.banner-promocional:hover .img-banner {
+    transform: scale(1.03);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 480px) {
+    .banner-promocional {
+        width: 95%;
+        margin-bottom: 15px;
+    }
+}

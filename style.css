@@ -14,11 +14,11 @@ body {
     color: var(--text-dark);
 }
 
-/* Header Estilo Entel.cl */
+/* --- HEADER ESTILO ENTEL.CL --- */
 header {
     background: linear-gradient(135deg, var(--entel-blue) 0%, var(--entel-dark) 100%);
     color: white;
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
     border-bottom: 6px solid var(--entel-orange);
 }
@@ -28,44 +28,65 @@ header {
     display: inline-block;
     padding: 10px 25px;
     border-radius: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .logo-entel {
-    width: 110px;
+    width: 100px;
     height: auto;
     display: block;
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin: 0;
     font-weight: 800;
 }
 
-/* Buscador */
+/* --- BANNER PROMOCIONAL --- */
+.banner-promocional {
+    width: 100%;
+    max-width: 750px;
+    margin: 15px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.img-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.banner-promocional:hover .img-banner {
+    transform: scale(1.03);
+}
+
+/* --- BUSCADOR --- */
 #busqueda {
     width: 90%;
     max-width: 500px;
-    padding: 15px 25px;
-    margin-top: 25px;
+    padding: 14px 25px;
+    margin-top: 15px;
     border-radius: 50px;
     border: none;
     font-size: 1rem;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Grid de Productos */
+/* --- GRID DE PRODUCTOS --- */
 .grid-catalogo {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
-    padding: 40px 10%;
+    padding: 30px 10%;
     max-width: 1400px;
     margin: 0 auto;
 }
 
-/* Tarjeta estilo Entel (Blanca, limpia, sombra suave) */
+/* --- TARJETAS --- */
 .card {
     background: white;
     border-radius: 20px;
@@ -83,9 +104,8 @@ header h1 {
     box-shadow: 0 15px 35px rgba(0,51,160,0.1);
 }
 
-/* Imagen del equipo */
 .img-container {
-    height: 200px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,30 +119,27 @@ header h1 {
     cursor: zoom-in;
 }
 
-/* Textos */
 .brand { font-size: 0.8rem; color: #777; text-transform: uppercase; font-weight: bold; }
-.model { font-size: 1.3rem; font-weight: 700; margin: 5px 0 15px 0; color: var(--entel-dark); }
+.model { font-size: 1.2rem; font-weight: 700; margin: 5px 0 12px 0; color: var(--entel-dark); }
 
-/* Precios */
 .price-row {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 8px 0;
     border-top: 1px solid #f0f0f0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .price-val { font-weight: 800; color: var(--entel-blue); }
 
-/* Etiquetas de oferta */
 .discount-tag {
     background: var(--entel-orange);
     color: white;
-    padding: 6px;
-    border-radius: 8px;
+    padding: 8px;
+    border-radius: 10px;
     font-weight: bold;
     font-size: 0.9rem;
-    margin: 15px 0;
+    margin: 12px 0;
 }
 
 .fiber-box {
@@ -135,51 +152,32 @@ header h1 {
     margin-top: 10px;
 }
 
-/* Modal e Iconos */
+/* --- MODAL --- */
 .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); padding-top: 50px; }
-.modal-contenido { margin: auto; display: block; width: 80%; max-width: 500px; }
+.modal-contenido { margin: auto; display: block; width: 85%; max-width: 500px; border-radius: 10px; }
 .cerrar-modal { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
 
-/* Botón flotante */
+/* --- BOTÓN WHATSAPP --- */
 .btn-whatsapp {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 20px;
+    right: 20px;
     background-color: #25d366;
     color: white;
-    padding: 15px 25px;
+    padding: 12px 20px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 999;
-}
-/* Estilo para el contenedor del banner */
-.banner-promocional {
-    width: 100%;
-    max-width: 800px; /* Evita que se vea gigante en PC */
-    margin: 10px auto 25px auto;
-    border-radius: 20px;
-    overflow: hidden; /* Corta las esquinas de la imagen para que coincidan con el borde redondeado */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    font-size: 0.9rem;
 }
 
-.img-banner {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-/* Efecto opcional: un pequeño zoom al pasar el mouse */
-.banner-promocional:hover .img-banner {
-    transform: scale(1.03);
-}
-
-/* Ajuste para móviles */
+/* --- AJUSTES MÓVILES (CORRECCIÓN TAMAÑO) --- */
 @media (max-width: 480px) {
+    header { padding: 20px 10px; }
+    
+    header h1 { font-size: 1.4rem; }
+
     .banner-promocional {
         width: 95%;
-        margin-bottom: 15px;
-    }
-}

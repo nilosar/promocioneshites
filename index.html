@@ -3,50 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inspiración Entel 2026</title>
+    <title>Catálogo Entel - Ofertas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <div class="header-container">
-            <div class="logo">entel</div>
-            <nav>
-                <a href="#">Personas</a>
-                <a href="#">Empresas</a>
-                <a href="#" class="btn-mi-entel">Mi Entel</a>
-            </nav>
+        <div class="header-content">
+            <div class="logo-wrapper">
+                <img src="./img/Entel_(Chile,_2020-present).svg" alt="Entel Logo" class="logo-entel" onerror="this.style.display='none'">
+            </div>
+            <h1>Ofertas Móviles Entel</h1>
+            <div class="badge-plan">Plan Móvil Fijo: $17.990</div>
+            
+            <input type="text" id="busqueda" placeholder="¿Qué equipo buscas? (Ej: Samsung, Xiaomi...)">
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <span class="badge">NUEVO LANZAMIENTO</span>
-                <h1>Samsung Galaxy S26 Ultra</h1>
-                <p>Pórtate con 50% dcto. y llévalo en 24 cuotas sin interés.</p>
-                <button class="btn-primary">Lo quiero</button>
-            </div>
-        </section>
-
-        <section class="grid-productos">
-            <div class="card">
-                <div class="discount-label">36% DCTO.</div>
-                <img src="https://via.placeholder.com/150" alt="Smartphone">
-                <h3>Samsung Galaxy A56 5G</h3>
-                <p class="precio-normal">Antes: $499.990</p>
-                <p class="precio-oferta">$319.990</p>
-                <button class="btn-outline">Ver más</button>
-            </div>
-            
-            <div class="card">
-                <div class="discount-label">25% DCTO.</div>
-                <img src="https://via.placeholder.com/150" alt="Smartphone">
-                <h3>Honor Magic 8 Lite</h3>
-                <p class="precio-normal">Antes: $519.990</p>
-                <p class="precio-oferta">$389.990</p>
-                <button class="btn-outline">Ver más</button>
-            </div>
-        </section>
+        <div id="catalogo" class="grid-catalogo"></div>
     </main>
+
+    <a href="https://wa.me/56965699563" class="btn-whatsapp" target="_blank">
+        <span>Hablar con un ejecutivo</span>
+    </a>
+
+    <div id="modalImagen" class="modal" onclick="this.style.display='none'">
+        <span class="cerrar-modal">&times;</span>
+        <img class="modal-contenido" id="imgGrande">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
